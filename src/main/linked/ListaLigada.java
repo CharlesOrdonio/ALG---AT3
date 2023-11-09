@@ -6,92 +6,127 @@ public class ListaLigada implements EstruturaElementar{
 
     private No cabeca;
 
+    private No rabo;
+
+
     public ListaLigada() {
 
     }
 
     @Override
     public boolean buscaElemento(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscaElemento'");
+        No Atual = cabeca;
+        while (Atual != null){
+        if(Atual.getProximo() == valor){
+            return Atual.getProximo();
+        }
+        for (int i = 0; valor != No Atual[i]; i++){
+            if(valor == No[i]){
+                System.out.println("O elemento está na lista na posição: ", i+1);
+            }
+            else{
+                System.out.println("O elemento não esta na lista");
+            }
+
+            }
+        }
     }
 
     @Override
     public int buscaIndice(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscaIndice'");
-    }
+        No Atual = cabeca;
+        while (Atual != null){
+        if(Atual.getProximo() == valor){
+            return Atual.getProximo();
+        }
+        for (int i = 0; valor != No Atual[i]; i++){
+            if(valor == [i]){
+                System.out.println("A posição existe e ela tem como valor: ", No[i]+1);
+            }
+            else{
+                System.out.println("A posição não existe");
+            }
+
+            }
+        }    }
 
     @Override
     public int minimo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'minimo'");
+        
     }
 
     @Override
     public int maximo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'maximo'");
+       
     }
 
     @Override
     public int predecessor(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'predecessor'");
+        
     }
 
     @Override
     public int sucessor(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sucessor'");
+        
     }
 
     @Override
     public void insereElemento(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insereElemento'");
+        
     }
 
     @Override
     public void insereElementoPosicao(int valor, int buscaIndice) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insereElementoPosicao'");
+       
     }
 
     @Override
     public void insereInicio(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insereInicio'");
+        if (this.cabeca == null){
+            this.cabeca = new No(valor);
+        }
+        else {
+            No n = new No(valor);
+            n.setProximo(this.cabeca);
+            this.cabeca = n;
+        }
+        
     }
 
     @Override
     public void insereFim(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insereFim'");
+        if(this.rabo == null){
+            this.rabo = new No(valor);
+        }
+        else{
+            No n = new No(valor);
+            n.setProximo(this.rabo);
+            n = this.rabo;
+        }
+        
     }
 
     @Override
     public void remove(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+        
     }
 
     @Override
     public void removeIndice(int indice) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'removeIndice'");
+        
     }
 
     @Override
     public void removeInicio() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'removeInicio'");
+       
     }
 
     @Override
     public void removeFim() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'removeFim'");
+        
     }
+    
+}
+
     
 }
